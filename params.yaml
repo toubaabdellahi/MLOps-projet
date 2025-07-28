@@ -1,0 +1,24 @@
+preprocess:
+  input: s3://mlopsdemlbucket21032/G_21003_21008_21027_21032/G_21003_21008_21027_21032_Raw/names-mr.csv
+  output: s3://mlopsdemlbucket21032/G_21003_21008_21027_21032/G_21003_21008_21027_21032_Processed/names_clean.csv
+
+train:
+  data: G_21003_21008_21027_21032/G_21003_21008_21027_21032_Processed/names_clean.csv
+  model_s3_path: name_gender_model.pkl
+  model_s3_folder: G_21003_21008_21027_21032/G_21003_21008_21027_21032_models
+  bucket: mlopsdemlbucket21032
+  random_state: 42
+  n_estimators: 100
+  max_depth: 5
+  max_iterations: 1000  # pour logistic regression
+
+aws:
+  aws_access_key_id: ASIAVTUQT5TNLTHAHV4Z
+  aws_secret_access_key: nO9ccqK54iPQI6/Jesc9KENvltWed9dmY7c31ewf
+  aws_session_token: IQoJb3JpZ2luX2VjEG0aCWV1LXdlc3QtMyJHMEUCIQCLzBJblGv1yp0gfD8T3dz8Z4bR9itcgAE+iiFelX6wSwIgXw7HFgC2eu7It+4xKjjiN4i8T3bTlRENxeF6BgT+dSUq8AIIlv//////////ARAAGgwzODU3NzY2MTA1MjIiDAv0G8jZzgzjzIUE/irEAjocQkChJj2oJAx6lAvhXwN7RazFAr0LgradlZa4Nypz4psYF9e04C0SkDUrS8t+LmKUrhP7we8qxP5jMDbUun3PjuJYvy/hk0bAvYOrA9CaevB2/aLnG0beVxC1HLVIPhGVUE5YLmeCYB3hkqm+D6ri1lvTEUZ7iwph1TpttuSIhWO0Hzx+cWn7mZMv/PxmfhiBhOVbbW2ZyJv4wGoDK1ZuJtJ8UZZBjYBpQtMuxrNkqhxYRkDJeVYuaMhhH6zA2dQCRQDTiuFrG1qV3Y7uWNt9tm13Qb7YZIcLtU6s7is3BjzodQR2k7ELMJW+IGh1E4++244ZypfdJo3eD8KQHwfKCN+H4tfXEKQ+czpb71IgjH1Bcc4RPbBLuGAUfzX/aG+gNAfWsbUIEnyqBMcZdXKZJCjh3X3YtFUytvo7ONtgtYWBEDC+wZ/EBjqnARl2vxsm+LaUKU0/u/adMOTN64bh+yhF5AS0ZureyThdUY5eG9oWXPvXfr55gTKawrUUMlrWBqYefVoZ4OCDWfFoW1HacTpmxBTUqcPPQzhzX1BDTNgmCpy8cbwxaiax6vOef6WZPnDZlJYf/owzfsJRy+alCVBEJtV8GSgmBVHjNpo7B7xqFyRilxGCuoA1amctPlK8k3HBI8BvGEf0XvyGdq5DXCSH
+  region_name: eu-north-1
+
+mlflow:
+  MLFLOW_TRACKING_URI: http://13.61.196.51:5000
+  model_name: name_gender_model
+  model_version: latest
