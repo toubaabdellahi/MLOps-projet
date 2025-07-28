@@ -1,0 +1,21 @@
+# train:
+#   data: mlopsdemlbucket21032/G_21003_21008_21027_21032/G_21003_21008_21027_21032_processes/movies_clean.csv
+#   model_s3_path: mlopsdemlbucket21032/G_21003_21008_21027_21032/G_21003_21008_21027_21032_models/model.pkl
+#   # random_state: 42
+#   # n_estimators: 100
+#   # max_depth: 5
+train:
+  data: G_21003_21008_21027_21032/G_21003_21008_21027_21032_Processed/names_clean.csv
+  bucket: mlopsdemlbucket21032
+  model_s3_folder: G_21003_21008_21027_21032/G_21003_21008_21027_21032_models
+  model_s3_path: name_gender_model.pkl
+  random_state: 42
+  max_iterations: 1000
+
+aws:
+  aws_access_key_id: ASIAVTUQT5TNL46NVWUW
+  aws_secret_access_key: rnvSok3vVahRux2H1GM7laytjWlRbJK1HgJwQHwY
+  region_name: eu-north-1
+
+mlflow:
+  MLFLOW_TRACKING_URI: http://13.61.196.51:5000/
