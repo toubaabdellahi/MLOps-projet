@@ -7,11 +7,6 @@
 - Extraction des prénoms depuis la colonne `NOMPL`
 - Prédiction des sexes (`SEXE`) à l'aide du modèle `LogisticRegression`
 - Accuracy calculée sur l'ensemble de test
-- Logging des résultats d’évaluation dans MLflow :
-
-    test_accuracy
-
-    classification_report
-
+- Logging des résultats d’évaluation dans MLflow 
 - Logging de l’évaluation dans MLflow (URI : `http://13.61.196.51:5000`)
 -  Résultat atteint : **accuracy ~ 0.94**
