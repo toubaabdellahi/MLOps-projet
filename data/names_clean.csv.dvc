@@ -1,0 +1,5 @@
+outs:
+- md5: 4a707337ccd86489a2c5adc8a99d4d13
+  size: 1929308
+  hash: md5
+  path: names_clean.csv
