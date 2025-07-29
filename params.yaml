@@ -8,8 +8,8 @@ train:
   max_iterations: 1000
 
 aws:
-  aws_access_key_id: ASIAVTUQT5TNIEACTY7K
-  aws_secret_access_key: I9eDhuYgGWPJzepHQd3St5duojupjQN8v4AO0xPC
+  aws_access_key_id: ASIAVTUQT5TNN4CYI3RC
+  aws_secret_access_key: uwaZoiv0waYzlONpxN+SwwaHn32Z/8NQJLPBtzD9
   region_name: eu-north-1
 
 mlflow:
