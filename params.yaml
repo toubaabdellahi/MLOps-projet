@@ -4,13 +4,12 @@ preprocess:
 
 train:
   data: G_21003_21008_21027_21032/G_21003_21008_21027_21032_Processed/names_clean.csv
-  model_s3_path: name_gender_model.pkl
-  model_s3_folder: G_21003_21008_21027_21032/G_21003_21008_21027_21032_models
   bucket: mlopsdemlbucket21032
+  model_s3_folder: G_21003_21008_21027_21032/G_21003_21008_21027_21032_models
+  model_s3_path: name_gender_model.pkl
+  vectorizer_s3_path: name_gender_vectorizer.pkl
   random_state: 42
-  n_estimators: 100
-  max_depth: 5
-  max_iterations: 1000  # pour logistic regression
+  max_iterations: 1000
 
 aws:
   aws_access_key_id: ASIAVTUQT5TNLTHAHV4Z
