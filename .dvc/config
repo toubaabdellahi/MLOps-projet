@@ -1,0 +1,8 @@
+[core]
+    remote = s3remotee
+['remote "s3remote"']
+    url = s3://mlopsdemlbucket21032/dvcstoree
+    endpointurl = https://s3.eu-north-1.amazonaws.com
+['remote "s3remotee"']
+    url = s3://mlopsdemlbucket21032/dvcstore
+    endpointurl = https://s3.eu-north-1.amazonaws.com
