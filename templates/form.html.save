@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prédiction du genre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+            color: #111827;
+        }
+
+        input[type="text"] {
+            padding: 0.5em;
+            width: 80%;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .result {
+            margin-top: 1em;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #059669;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prédiction de genre</title>
+<
+<body>
+    <h2>Entrez un prénom :</h2>
+    <form method="POST" action="/predict_web">
+        <input type="text" name="name" required>
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if result %}
+        <h3>Résultat :</h3>
+        <p>Nom : {{ name }}</p>
+        <p>Genre prédit : {{ result }}</p>
+    {% endif %}
+</body>
+</html>
+
