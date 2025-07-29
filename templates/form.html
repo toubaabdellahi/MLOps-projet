@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 24px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        form {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px;
+            margin-top: 100px; /* laisse de l’espace sous le header fixe */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #27ae60;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prédire le genre</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Entrez un nom" required>
+        <input type="submit" value="Prédire">
+    </form>
+    {% if result %}
+        <h2>Résultat :<strong>{{ name }}</strong> est <strong>{{ result }}</strong></h2>
+    {% endif %}
+</body>
+</html>
